@@ -20,6 +20,26 @@
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
+- (IBAction)onShowHome:(id)sender{
+//    [self originRunTime];//直接通过runtime方法动态调用
+    
+    //通过Mediator中介转发
+    
+}
+
+- (void)originRunTime {
+    Class homeClass = NSClassFromString(@"Target_B");
+    SEL selector = NSSelectorFromString(@"Target_getHome:");
+    
+    id target = [[homeClass alloc] init];
+    
+    NSDictionary *params = @{@"desc":@"This is ModuleB Page \n from Target alloc"};
+    
+    UIViewController *homeVC = [target performSelector:selector withObject:params];
+    [self presentViewController:homeVC animated:YES completion:nil];
+}
+
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
