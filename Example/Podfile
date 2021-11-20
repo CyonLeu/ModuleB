@@ -1,10 +1,14 @@
+source 'gogs@git.qupeiyin.net:FeiZhu_IOS_Pub_Repo/FZSpecs.git'
+source 'https://cdn.cocoapods.org/'
+
+
 use_frameworks!
 
 platform :ios, '9.0'
 
 target 'ModuleB_Example' do
   pod 'ModuleB', :path => '../'
-
+  pod 'CTMediator'
   target 'ModuleB_Tests' do
     inherit! :search_paths
 

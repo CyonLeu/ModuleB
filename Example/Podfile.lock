@@ -1,17 +1,25 @@
 PODS:
+  - CTMediator (46)
   - FBSnapshotTestCase (2.1.4):
     - FBSnapshotTestCase/SwiftSupport (= 2.1.4)
   - FBSnapshotTestCase/Core (2.1.4)
   - FBSnapshotTestCase/SwiftSupport (2.1.4):
     - FBSnapshotTestCase/Core
-  - ModuleB (0.1.0)
+  - MediatorTarget (0.1.0):
+    - CTMediator
+  - ModuleB (0.1.0):
+    - MediatorTarget
 
 DEPENDENCIES:
+  - CTMediator
   - FBSnapshotTestCase
   - ModuleB (from `../`)
 
 SPEC REPOS:
+  "gogs@git.qupeiyin.net:FeiZhu_IOS_Pub_Repo/FZSpecs.git":
+    - MediatorTarget
   trunk:
+    - CTMediator
     - FBSnapshotTestCase
 
 EXTERNAL SOURCES:
@@ -19,9 +27,11 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
+  CTMediator: f1cf58d509fb3192086c367711f039efd769b907
   FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
-  ModuleB: 60b67ee2e471ace8ad67c4877479e5a4d3a6b693
+  MediatorTarget: f0558b28aff251dc2e3bbebd0c24017793f682cc
+  ModuleB: ba8b226d0abb8c2528c5d1466d836884d03a49a0
 
-PODFILE CHECKSUM: aae1a6661ca0cf357be311c1d903fc4e79f61634
+PODFILE CHECKSUM: 67eaba14f45c8d28dc78bd1675b07c52bd5030eb
 
 COCOAPODS: 1.11.2
